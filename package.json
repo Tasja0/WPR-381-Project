@@ -10,7 +10,11 @@
     "nodemon": "^2.0.0"
   },
   "dependencies": {
+    "dotenv": "^16.5.0",
     "ejs": "^3.1.0",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.18.1",
+    "nodemailer": "^7.0.3"
   }
 }

@@ -1,11 +1,52 @@
 </main>
 
-<footer class="bg-dark text-white text-center py-3 mt-5">
-      <div class="container">
-        <p class="mb-0">&copy; 2025 Community Portal</p>
+<footer class="bg-dark text-white py-4 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="/" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="/about" class="text-white text-decoration-none">About</a></li>
+          <li><a href="/events" class="text-white text-decoration-none">Events</a></li>
+          <li><a href="/contact" class="text-white text-decoration-none">Contact</a></li>
+        </ul>
       </div>
-    </footer>
+      
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Contact Info</h5>
+        <ul class="list-unstyled">
+          <li><i class="bi bi-envelope me-2"></i> info@communityportal.com</li>
+          <li><i class="bi bi-telephone me-2"></i> (123) 456-7890</li>
+          <li><i class="bi bi-geo-alt me-2"></i> 123 Community St, City</li>
+        </ul>
+      </div>
+      
+      <div class="col-md-4">
+        <h5 class="text-uppercase">Follow Us</h5>
+        <div class="social-icons">
+          <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <hr class="my-4 bg-light">
+    
+    <div class="text-center">
+      <p class="mb-0">&copy; 2025 Community Portal. All rights reserved.</p>
+      <% if (currentYear) { %>
+        <p class="small mt-2 mb-0">Page rendered on: <%= new Date().toLocaleDateString() %></p>
+      <% } %>
+    </div>
+  </div>
+</footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<% if (process.env.NODE_ENV === 'development') { %>
+  <script>console.log('Development mode active');</script>
+<% } %>
+</body>
 </html>
