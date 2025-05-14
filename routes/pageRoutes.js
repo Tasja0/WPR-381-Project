@@ -104,6 +104,7 @@ router.get('/contact', (req, res) => {
 router.post('/contact', (req, res) => {
   const { name, email, message } = req.body;
   messages.push({ name, email, message, date: new Date() });
+  console.log(messages);
   res.redirect('/thankyou?name=' + encodeURIComponent(name));
 });
 
