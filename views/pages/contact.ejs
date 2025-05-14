@@ -2,7 +2,20 @@
 
 <div class="contact-container">
   <h1 class="contact-title">Contact Us</h1>
-  <form method="POST" action="/contact" class="contact-form">
+  
+  <% if (typeof error !== 'undefined') { %>
+    <div class="alert alert-danger">
+      <%= error %>
+    </div>
+  <% } %>
+  
+  <% if (typeof success !== 'undefined') { %>
+    <div class="alert alert-success">
+      <%= success %>
+    </div>
+  <% } %>
+
+  <form method="POST" action="/contact" class="contact-form" id="contactForm" novalidate>
     <div class="form-group">
       <label for="name">Your Name</label>
       <input 
@@ -10,8 +23,12 @@
         id="name" 
         name="name" 
         placeholder="Enter your name" 
-        required 
+        required
+        minlength="2"
+        maxlength="50"
+        value="<%= typeof formData !== 'undefined' ? formData.name : '' %>"
       />
+      <div class="invalid-feedback">Please enter a valid name (2-50 characters)</div>
     </div>
     
     <div class="form-group">
@@ -21,8 +38,11 @@
         id="email" 
         name="email" 
         placeholder="Enter your email" 
-        required 
+        required
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+        value="<%= typeof formData !== 'undefined' ? formData.email : '' %>"
       />
+      <div class="invalid-feedback">Please enter a valid email address</div>
     </div>
     
     <div class="form-group">
@@ -33,11 +53,40 @@
         placeholder="Type your message here..." 
         rows="5" 
         required
-      ></textarea>
+        minlength="10"
+        maxlength="500"
+      ><%= typeof formData !== 'undefined' ? formData.message : '' %></textarea>
+      <div class="invalid-feedback">Message must be between 10-500 characters</div>
     </div>
     
     <button type="submit" class="submit-btn">Send Message</button>
   </form>
 </div>
+
+<script>
+  // Client-side validation
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    const form = event.target;
+    if (!form.checkValidity()) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    form.classList.add('was-validated');
+  });
+
+  // Real-time validation
+  const inputs = document.querySelectorAll('#contactForm input, #contactForm textarea');
+  inputs.forEach(input => {
+    input.addEventListener('input', () => {
+      if (input.checkValidity()) {
+        input.classList.remove('is-invalid');
+        input.classList.add('is-valid');
+      } else {
+        input.classList.remove('is-valid');
+        input.classList.add('is-invalid');
+      }
+    });
+  });
+</script>
 
 <%- include ('../partials/footer')%>
