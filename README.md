@@ -26,7 +26,7 @@ A community portal website built with Node.js, Express, and EJS templating engin
 | Natasja Nell        | Team Lead             | Project coordination, quality assurance |
 | Tshifhiwa Makhani   | Frontend Developer    | EJS templates, CSS styling |
 | Nhlanhla Mbatha     | Backend Developer     | Express routes, server logic |
-| Orabile Mahlaba     | Data Manager          | Data structure, form handling |
+| Oarabile Mahlaba     | Data Manager          | Data structure, form handling |
 
 ## Features
 - Dynamic page rendering using EJS templates
