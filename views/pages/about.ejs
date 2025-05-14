@@ -1,3 +1,21 @@
-<%- include ('../partials/header')%>
-<h1>About Us</h1>
-<%- include ('../partials/footer')%>
+<%- include ('../partials/header') %>
+
+<div class="container mt-5">
+  <h1 class="text-center mb-4">About Us</h1>
+  <h2 class="text-center">Get to know the team</h2>
+  
+  <div class="row justify-content-center">
+    <% team.forEach(member => { %>
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title"><%= member.name %></h5>
+            <p class="card-text text-muted"><%= member.role %></p>
+          </div>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+</div>
+
+<%- include ('../partials/footer') %>
