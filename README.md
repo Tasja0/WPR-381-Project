@@ -37,41 +37,8 @@ A community portal website built with Node.js, Express, and EJS templating engin
 - Proper separation of concerns (MVC-like structure)
 
 ## Folder Structure 
-WPR-381-PROJECT/
-├── node_modules/
-├── public/
-│   ├── css/
-│   │   └── styles.css
-│   └── images/
-│       ├── add-images-here.txt
-│       ├── image.png
-│       ├── pexels-cottonbro-3171770.jpg
-│       ├── pexels-lagosfoodbank-8060302.jpg
-│       ├── pexels-miami302-32034604.jpg
-│       ├── pexels-mralpha-23625642.jpg
-│       ├── pexels-prismatico-2372978.jpg
-│       ├── pexels-rethaterguson-3810792.jpg
-│       ├── pexels-thirdman-7656743.jpg
-│       └── pexels-vanessa-loring-7869229.jpg
-├── routes/
-│   ├── contactRoutes.js
-│   └── pageRoutes.js
-├── views/
-│   ├── pages/
-│   │   ├── about.ejs
-│   │   ├── contact.ejs
-│   │   ├── events.ejs
-│   │   ├── home.ejs
-│   │   └── thankyou.ejs
-│   └── partials/
-│       ├── footer.ejs
-│       └── header.ejs
-├── .env
-├── .gitignore
-├── app.js
-├── package-lock.json
-├── package.json
-└── README.md
+
+![Screenshot](/public/images/Screenshot 2025-05-14 191209.png)
 
 ## Setup Instructions
 1. Clone the repository:
