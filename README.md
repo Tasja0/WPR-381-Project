@@ -48,12 +48,16 @@ A community portal website built with Node.js, Express, and EJS templating engin
 2. Install dependencies:
 
     npm install
+3. install nodemon
+     npm install -g nodemon
+4. install dotenv:
+     npm install dotenv
 
-3. Start the development server:
+5. Start the development server:
 
     npm run dev
 
-4. Access the application at:
+7. Access the application at:
 
    http://localhost:8000
 
