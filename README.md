@@ -38,7 +38,7 @@ A community portal website built with Node.js, Express, and EJS templating engin
 
 ## Folder Structure 
 
-![Screenshot](/public/images/Screenshot 2025-05-14 191209.png)
+![Screenshot](/public/images/Screenshot-2025-05-14-191209.png)
 
 ## Setup Instructions
 1. Clone the repository:
@@ -55,7 +55,7 @@ A community portal website built with Node.js, Express, and EJS templating engin
 
 4. Access the application at:
 
-    http://localhost:3000
+   http://localhost:8000
 
 **Project Highlights**
 
