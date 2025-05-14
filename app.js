@@ -13,6 +13,7 @@ const port = 8000;
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static('public'));
 
 // Session setup (required for express-flash)
 app.use(session({

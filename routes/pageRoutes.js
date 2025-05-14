@@ -13,14 +13,14 @@ const events = [
     title: 'Community Clean-Up', 
     date: '2025-06-01', 
     location: 'Main Park', 
-    image: 'cleanup.jpg',
+    image: 'pexels-lagosfoodbank-8060302.jpg',
     time: '09:00 AM' 
   },
   { 
     title: 'Tech Talk', 
     date: '2025-06-10', 
     location: 'Main City', 
-    image: 'talk.jpg',
+    image: 'pexels-thirdman-7656743.jpg',
     time: '02:00 PM' 
   }
 ];
