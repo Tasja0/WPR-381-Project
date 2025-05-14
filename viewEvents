@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+
+<div class="container">
+  <h1>Upcoming Events</h1>
+  <div class="events-grid">
+    <% events.forEach(event => { %>
+      <div class="event-card">
+        <img src="<%= event.image %>" alt="<%= event.title %>">
+        <h2><%= event.title %></h2>
+        <p><strong>Date:</strong> <%= event.date %></p>
+        <p><strong>Location:</strong> <%= event.location %></p>
+      </div>
+    <% }) %>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
